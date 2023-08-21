@@ -1,29 +1,33 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký thành viên</title>
-    <script type="text/javascript" src="bai9.js"></script>
     <link rel="stylesheet" href="bai9.css">
+    <script type="text/javascript" src="bai9.js"></script>
 </head>
 <body>
-    <h2>Đăng ký thành viên</h2>
-    <form id="registrationForm" onsubmit="return validateForm()"><!--tạo form đăng ký thành viên-->
-        <label for="username">Tên đăng nhập:</label><br><!--mở nhãn tạo form đăng ký-->
-        <input type="text" id="username" name="username" required><br>
-        
-        <label for="password">Mật khẩu:</label><br>
-        <input type="password" id="password" name="password" required><br>
-        
-        <label for="repassword">Nhập lại mật khẩu:</label><br>
-        <input type="password" id="repassword" name="repassword" required><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        
-        <input type="submit" value="Đăng ký">
-    </form>
-    <p id="errorMessage" style="color: red;"></p>
+    <form class="mot">
+       
+    <label for="username">Tên đăng nhập:</label><br>
+<input type="text" id="username" name="username"><br>
+<label for="password">Mật khẩu:</label><br>
+<input type="password" id="password" name="password"><br>
+<label for="confirm_password">Nhập lại mật khẩu:</label><br>
+<input type="password" id="confirm_password" name="confirm_password"><br>
+<label for="lastname">Họ của bạn:</label><br>
+<input type="text" id="lastname" name="lastname"><br>
+<label for="firstname">Tên của bạn:</label><br>
+<input type="text" id="firstname" name="firstname"><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email"><br>
+<label for="phone">Số điện thoại:</label><br>
+<input type="tel" id="phone" name="phone"><br><br>
+<input type="submit" value="Đăng ký">
+</form>
 </body>
 </html>
+
 
