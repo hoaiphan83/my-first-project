@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chuyển đổi số nguyên</title>
+</head>
+<body>
+
+    <h1>Chuyển đổi số nguyên</h1>
+
+    <p>Nhập số nguyên dương n: <input type="text" id="numberInput"></p>
+
+    <button onclick="convert()">Chuyển đổi</button>
+
+    <p id="binaryOutput"></p>
+    <p id="hexOutput"></p>
+
+    <script>
+        function convert() {
+            // Lấy giá trị nhập từ input
+            var n = parseInt(document.getElementById("numberInput").value);
+
+            // Kiểm tra n có phải số nguyên dương
+            if (Number.isInteger(n) && n > 0) {
+                // Chuyển đổi sang số nhị phân và in ra
+                var binary = n.toString(2);
+                document.getElementById("binaryOutput").innerHTML = "Số nhị phân: " + binary;
+
+                // Chuyển đổi sang số hexa và in ra
+                var hex = n.toString(16);
+                document.getElementById("hexOutput").innerHTML = "Số hexa: " + hex;
+            } else {
+                alert("Vui lòng nhập một số nguyên dương.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<HTML>
+    <HEAD>
+    <TITLE>Exercise 3.3</TITLE>
+     <Script Language = "JavaScript">
+    // Khai báo các biến trong java script
+    var question="What is 10+10?";
+    var answer=20;
+    var correct='Đúng';
+    var incorrect='Sai';
+    
+    var response = prompt(question,"0");
+    //Kiểm tra câu trả lời cho câu hỏi đầu tiên
+    if (response != answer) {
+    if (confirm("Bạn đã trả lời sai. Nhấn Ok để trả lời lại"))
+             response = prompt(question,"0");/*prompt dùng để sử dụng hiển thị hộp thoại dưới dạng văn bản*/
+         } else {
+         
+        if (confirm("Đúng rồi. Nhấn Ok để sang câu hỏi thứ 2 .")) {
+             question = "What is 10*10?";
+             answer = 100;
+             response = prompt (question,"0");
+           }
+         }   
+         var output = (response == answer) ? correct : incorrect;
+        </SCRIPT>
+         </HEAD>
+         <BODY>
+        <Script Language = "JavaScript">
+          document.write(output);
+        </SCRIPT>
+         </BODY>
+         </HTML>
+    

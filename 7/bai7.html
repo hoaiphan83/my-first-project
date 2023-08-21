@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Đăng ký thành viên</title>
+
+<script type="text/javascript">/*mở thẻ javascript*/
+	function check()/*tạo hàm function kiểm tra*/
+{
+	if (document.f1.dangnhap.value =='')/*Lấy giá trị của trường nhập liệu “Tên đăng nhập”.*/
+	{
+		window.alert("Tên tài khoản không được để trống");//Hiển thị thông báo lỗi.
+		document.f1.dangnhap.focus();
+		return false;
+	}
+	if (document.f1.matkhau.value.length < 5)//Lấy giá trị của trường nhập liệu “Mật khẩu”
+	{
+		window.alert("Mật khẩu phải nhiều hơn 5 ký tự");//Hiển thị thông báo lỗi.
+		document.f1.matkhau.focus();
+		return false;
+	}
+	 if (document.f1.matkhau.value != document.f1.nhaplai.value)//Lấy giá trị của trường nhập liệu “Nhập lại mật khẩu”.
+	{
+		window.alert("Mật khẩu gõ lại không khớp");//Hiển thị thông báo lỗi.
+		document.f1.nhaplai.focus();
+		return false;
+	}
+	 if (document.f1.nam.value == "")// Lấy giá trị của trường nhập liệu “Năm sinh”
+	{
+		window.alert("Năm sinh khống được để trống");//Hiển thị thông báo lỗi.
+		document.f1.nam.focus();
+		return false;
+	}
+	 if (document.f1.ten.value == "")//Lấy giá trị của trường nhập liệu “Họ và tên”.
+	{
+		window.alert("Tên không được để trống");//Hiển thị thông báo lỗi.
+		document.f1.ten.focus();
+		return false;
+	}
+	if (document.f1.email.value == "")//Lấy giá trị của trường nhập liệu “Email”.
+	{
+		window.alert("Chưa nhập email.");//Hiển thị thông báo lỗi.
+		document.f1.email.focus();//Đặt con trỏ vào trường nhập liệu “Tên đăng nhập”
+		return false;
+	}
+	re=/\w+@\w+\.\w+/;
+	if(re.test(email)==false)
+	{
+		window.alert("Email không đúng định dạng");//Hiển thị thông báo lỗi.
+		document.f1.email.focus();//Đặt con trỏ vào trường nhập liệu “Tên đăng nhập”
+		return false;// Ngăn chặn việc submit form.
+	}
+	}
+</script>
+<style>
+#dangky{
+background-color:#CCCCCC;/*tạo màu nền cho trang web*/
+text-align:center;/*căn chỉnh đoạn văn bản ở giữa*/
+}
+#bang{background-color:#66FFCC;/*tạo màu nền cho bảng*/
+font-size:24px}/*tạo kích thước cho bảng*/
+input{font-family:Arial;padding:2px 0 2px 5px;/*thiết lập phông chữ là Arial căn khoảng cách từ lề */
+margin:0 0 10px 0;/*thiết lập căn chỉnh lề*/
+width:200px; height:20px;/*thiết lập độ rộng và đường cao*/
+background:#fff;/*thiết lập màu nền */
+border:1px solid #dbdbdb;/*thiết lập đường viền liền*/
+color:#999;font-size:13px;/*thiết lập màu và kích thước chữ*/
+-moz-border-radius:3px;/*xác định bán kính của góc bo tròn*/
+ -webkit-border-radius:3px;
+  border-radius:3px;
+  }
+/*style cho radio button*/
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] {
+    color: DarkBrown;/*thiết lập màu */
+    font-family:Arial, sans-serif;
+    font-size:14px;/*thiết lập phông chữ 14px*/
+}
+input[type="radio"]{
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;/*căn giữa phần tử theo chiều dọc*/
+    cursor:pointer;/*thay đổi hình dạng của con trỏ chuột khi di chuyển qua phần tử đó*/
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+input[type="radio"] {
+     background-color: DarkBrown;
+}
+input[type="radio"]:checked {
+     background-color: Orange;
+}
+input[type="radio"] ,
+input[type="radio"]:checked  {
+  -webkit-transition:background-color 0.4s linear;/*sử dụng để thay đổi màu nền của phần tử HTML khi di chuột qua đó.*/
+  -o-transition:background-color 0.4s linear;/*sử dụng để thay đổi màu nền của phần tử HTML khi di chuột qua đó.*/
+  -moz-transition:background-color 0.4s linear;/*sử dụng để thay đổi màu nền của phần tử HTML khi di chuột qua đó.*/
+  transition:background-color 0.4s linear;/*sử dụng để thay đổi màu nền của phần tử HTML khi di chuột qua đó.*/
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+input[type=text]{width:40%}
+</style>
+</head>
+
+<body>
+<center>
+<form action="" name="f1"  enctype="multipart/form-data" method="post" onSubmit="return check()">
+<table id="bang" width="680" border="0">
+  <tr>
+    <td height="62" colspan="2" id="dangky"><h1> ĐĂNG KÝ THÀNH VIÊN</h1></td>
+  </tr>
+  <tr>
+	<td width="268"><div align="left">Tên đăng nhập </div></td>
+	<td width="524"><input class="input" type="text" name="dangnhap" width:"90%" value"" /></td>
+	</tr>
+	<td> <div align="left">Mật khẩu</div></td>
+	<td> <input class="input" type="password" name="matkhau" width:"90%" value="" /></td>
+	<tr>
+	<td><div align="left">Nhập lại mật khẩu</div></td>
+	<td><input class="input" type="password" name="nhaplai" width:"90%" value="" /></td>
+	</tr>
+	<tr>
+	<td> <div align="left">Tên thường gọi</div></td>
+	<td><input class="input" type="text" name="ten"  value"" /></td>
+	</tr>
+	<tr>
+	<td><div align="left">Email</div></td>
+	<td> <input class="input" type="email" name="email" value ""/></td>
+	</tr>
+	<tr>
+	<td><div align="left">Ngày sinh</div></td>
+	<td><input class="input" type="text" name="ngaysinh" width:"90%" value"" />	 </td>
+	</tr>
+	<tr>
+	<td><div align="left">Giới tính</div></td>
+	<td><input name="gt" type="radio" value="Nam" checked="checked"/> Nam <input type="radio" name="gt" value="nu"/> Nữ </td>
+	</tr>
+	<tr>
+	<td><div align="left">Hình ảnh</div></td>
+	<td><input type="file" name="image" value="Chọn file ảnh" /></td>
+	</tr>
+  </tr>
+  <tr>
+  <td> </td>
+  </tr>
+  <tr>
+  <td></td>
+  <td> <button type="submit" name="submit" onclick="return check()">Đăng ký</button> &nbsp; &nbsp; &nbsp;
+  <button type="reset" name="reset">Nhập lại</button></td>
+  </tr>
+</table>
+</form>
+</center>
+</body>
+</html>

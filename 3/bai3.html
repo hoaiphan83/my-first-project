@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form><!--thẻ mở form-->
+  <label for="msg">Nhập nội dung:</label><br><!--thẻ định nghĩa nhãn -->
+  <input type="text" id="msg" name="msg"><br><!--thẻ tạo input-->
+  <br>
+  <button onclick="HienThi()">Hiển thị</button><!--Đây là thuộc tính của button để gọi hàm HienThi().-->
+</form> 
+
+<script>
+function HienThi()//Đây là khai báo hàm HienThi()
+ {
+  var x = document.getElementById("msg").value;/*Đây là cách lấy giá trị của textbox với id là “msg”*/
+  alert(x);/*Đây là cách hiển thị giá trị của biến x trong hộp thoại thông báo.*/
+}
+</script>
+
+</body>
+</html>
+
+   
+       

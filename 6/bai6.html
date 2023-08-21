@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bai6.css">
+<!--javascript here-->
+<script language="javascript">
+    function Doitien()//tạo hàm đổi tiền
+    {
+        var vnd,usd, euro;//khai báo biến
+        vnd=parseFloat(prompt("Nhập số tiền cần chuyển đổi: ",0));
+        usd=vnd/22000;
+        euro=vnd/27000
+        //alert("USD= "+usd.toFixed(2));
+        document.write("<Center>");//căn chỉnh ở vị trí ttrung tâm
+        document.write("<H1 > Chương trình đổi tiền VNĐ ra ngoại tệ </H1>");
+        document.write("<hr width=40%>");//tạo đường kẻ ngang với độ rộng là 40%
+        document.write("<table border='1'>");//tạo bảng với đường viền gấp đôi
+        document.write("<tr>");
+        document.write("<th colspan='2'>Số tiền VNĐ là: "+ vnd.toFixed(2)+"</th>");//chuyển đổi một số thành một chuỗi
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<td> USD </td> <td> "+ usd.toFixed(2)+"</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<td> EURO </td> <td> "+ euro.toFixed(2)+"</td>");
+        document.write("</tr>");
+        document.write("</table>");	
+        document.write("</Center>");	
+    }
+    </script>
+    <meta http-equit= "Content-Type" content="Text/html"; charset="utf-8"/>
+    <title>Chương trình đổi tiền VNĐ ra ngoại tệ </title>
+    </head>
+    <body>
+        <H1> Chương trình đổi tiền VNĐ ra ngoại tệ </H1>
+        <input type="Button" name= "btnDoi" value="Đổi tiền" onClick="Doitien()"><!--tạo nút button để đổi tiền-->
+    </body>
+    </html>
+    
